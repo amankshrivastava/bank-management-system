@@ -3,12 +3,13 @@ package BankManagementSystem;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.*;
 
 public class Login extends JFrame implements ActionListener {
 
     JButton login, signup, clear;
     JTextField cardTextField;
-    JPasswordField pinTextField;
+    JPasswordField pinPasswordField;
 
     Login() {
 
@@ -44,10 +45,10 @@ public class Login extends JFrame implements ActionListener {
         pin.setBounds(120, 220, 250, 30);
         add(pin);
 
-        pinTextField = new JPasswordField(); 
-        pinTextField.setBounds(300, 220, 250, 30);
-        pinTextField.setFont(new Font("Arial", Font.BOLD, 14));
-        add(pinTextField);
+        pinPasswordField = new JPasswordField(); 
+        pinPasswordField.setBounds(300, 220, 250, 30);
+        pinPasswordField.setFont(new Font("Arial", Font.BOLD, 14));
+        add(pinPasswordField);
 
         login = new JButton("SIGN IN");
         login.setBounds(300, 300, 100, 30);
@@ -78,11 +79,25 @@ public class Login extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent ae) {
         if(ae.getSource() == login) {
-
+            Conn c = new Conn();
+            String card_number  = cardTextField.getText();
+            String pin  = pinPasswordField.getText();
+            String query  = "SELECT * FROM login WHERE card_number = '"+card_number+"' and pin = '"+pin+"'";
+            try {
+                ResultSet rs = c.s.executeQuery(query);
+                if(rs.next()){
+                    setVisible(false);
+                    new Transactions().setVisible(true);
+                }else{
+                    JOptionPane.showMessageDialog(null, "Incorrect Card Number or PIN");
+                }
+            }catch(Exception e){
+                System.out.println(e);
+            }
         }
         else if(ae.getSource() == clear) {
             cardTextField.setText("");
-            pinTextField.setText("");
+            pinPasswordField.setText("");
         }
         else if(ae.getSource() == signup) {
             setVisible(false);
