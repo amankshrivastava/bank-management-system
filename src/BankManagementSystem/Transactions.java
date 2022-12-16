@@ -8,8 +8,10 @@ import java.awt.event.*;
 public class Transactions extends JFrame implements ActionListener {
 
     JButton deposit, withdrawl, fast_cash, mini_statement, pin_change, balance, exit;
+    String pin;
 
-    Transactions() {
+    Transactions(String pin) {
+        this.pin = pin;
         setLayout(null);
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
         Image i2 = i1.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
@@ -89,9 +91,16 @@ public class Transactions extends JFrame implements ActionListener {
         if(ae.getSource()==exit){ 
             System.exit(0);
         }
+        else if(ae.getSource()==deposit){ 
+            setVisible(false);
+            new Deposit(pin).setVisible(true);
+        }else if(ae.getSource()==withdrawl){ 
+            setVisible(false);
+            new Withdrawl(pin).setVisible(true);
+        }
     }
 
     public static void main(String[] args) {
-        new Transactions();
+        new Transactions("");
     }
 }
