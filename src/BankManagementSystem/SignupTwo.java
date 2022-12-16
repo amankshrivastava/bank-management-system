@@ -146,7 +146,7 @@ public class SignupTwo extends JFrame implements ActionListener {
 
         getContentPane().setBackground(Color.WHITE);
         setSize(850,800);
-        setLocation(500,120);
+        setLocation(350,0);
         setVisible(true);
     }
 
@@ -183,8 +183,9 @@ public class SignupTwo extends JFrame implements ActionListener {
                 String query = "INSERT INTO signuptwo VALUES('"+formno+"','"+religion+"','"+category+"','"+income+"','"+education+"','"+occupation+"','"+pan+"','"+aadhar+"','"+scitizen+"','"+eaccount+"')";
                 c.s.executeUpdate(query);
                 
-                // new Signup3(formno).setVisible(true);
-                // setVisible(false);
+                setVisible(false);
+                new SignupThree(formno).setVisible(true);
+                
             }
                 
       
