@@ -1,18 +1,80 @@
-## Getting Started
+## Bank Mangement System
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This Bank management system aka ATM Simulator System is a desktop based application. It functions similarly to a normal ATM. This ATM Simulator System has functionalities like Opening Banking Account, Deposit, Withdrawl, MiniStatement, Pin Change, etc.
 
-## Folder Structure
+## Technologies used
+- Core Java (Swing & AWT)
+- Database Used: MySQL
+- IDE used: Netbeans
 
-The workspace contains two folders by default, where:
+## MySQL Tables Schemas
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+### Signup
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| formno         | varchar(20) | YES  |     | NULL    |       |
+| name           | varchar(20) | YES  |     | NULL    |       |
+| father_name    | varchar(20) | YES  |     | NULL    |       |
+| dob            | varchar(20) | YES  |     | NULL    |       |
+| gender         | varchar(20) | YES  |     | NULL    |       |
+| email          | varchar(50) | YES  |     | NULL    |       |
+| marital_status | varchar(20) | YES  |     | NULL    |       |
+| address        | varchar(50) | YES  |     | NULL    |       |
+| city           | varchar(25) | YES  |     | NULL    |       |
+| pincode        | varchar(20) | YES  |     | NULL    |       |
+| state          | varchar(20) | YES  |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+### signuptwo
 
-## Dependency Management
++------------------+-------------+------+-----+---------+-------+
+| Field            | Type        | Null | Key | Default | Extra |
++------------------+-------------+------+-----+---------+-------+
+| formno           | varchar(20) | YES  |     | NULL    |       |
+| religion         | varchar(20) | YES  |     | NULL    |       |
+| category         | varchar(20) | YES  |     | NULL    |       |
+| income           | varchar(20) | YES  |     | NULL    |       |
+| education        | varchar(20) | YES  |     | NULL    |       |
+| occupation       | varchar(50) | YES  |     | NULL    |       |
+| pan              | varchar(20) | YES  |     | NULL    |       |
+| aadhar           | varchar(50) | YES  |     | NULL    |       |
+| senior_citizen   | varchar(25) | YES  |     | NULL    |       |
+| existing_account | varchar(20) | YES  |     | NULL    |       |
++------------------+-------------+------+-----+---------+-------+
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### signupthree
+
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| formno       | varchar(20)  | YES  |     | NULL    |       |
+| account_type | varchar(40)  | YES  |     | NULL    |       |
+| card_number  | varchar(16)  | YES  |     | NULL    |       |
+| pin          | varchar(10)  | YES  |     | NULL    |       |
+| facility     | varchar(100) | YES  |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+
+### login
+
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| formno      | varchar(20) | YES  |     | NULL    |       |
+| card_number | varchar(16) | YES  |     | NULL    |       |
+| pin         | varchar(10) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+
+### bank
+
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| pin    | varchar(20) | YES  |     | NULL    |       |
+| date   | varchar(50) | YES  |     | NULL    |       |
+| type   | varchar(20) | YES  |     | NULL    |       |
+| amount | varchar(20) | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+
+
