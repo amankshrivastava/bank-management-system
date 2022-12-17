@@ -5,7 +5,7 @@ This Bank management system aka ATM Simulator System is a desktop based applicat
 ## Technologies used
 - Core Java (Swing & AWT)
 - Database Used: MySQL
-- IDE used: Netbeans
+- IDE used: VS Code
 
 ## MySQL Tables Schemas
 
