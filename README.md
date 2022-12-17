@@ -42,35 +42,30 @@ This Bank management system aka ATM Simulator System is a desktop based applicat
 
 ### signupthree
 
-+--------------+--------------+------+-----+---------+-------+
 | Field        | Type         | Null | Key | Default | Extra |
-+--------------+--------------+------+-----+---------+-------+
+|--------------|--------------|------|-----|---------|-------|
 | formno       | varchar(20)  | YES  |     | NULL    |       |
 | account_type | varchar(40)  | YES  |     | NULL    |       |
 | card_number  | varchar(16)  | YES  |     | NULL    |       |
 | pin          | varchar(10)  | YES  |     | NULL    |       |
 | facility     | varchar(100) | YES  |     | NULL    |       |
-+--------------+--------------+------+-----+---------+-------+
 
 ### login
 
-+-------------+-------------+------+-----+---------+-------+
 | Field       | Type        | Null | Key | Default | Extra |
-+-------------+-------------+------+-----+---------+-------+
+|-------------|-------------|------|-----|---------|-------|
 | formno      | varchar(20) | YES  |     | NULL    |       |
 | card_number | varchar(16) | YES  |     | NULL    |       |
 | pin         | varchar(10) | YES  |     | NULL    |       |
-+-------------+-------------+------+-----+---------+-------+
 
 ### bank
 
-+--------+-------------+------+-----+---------+-------+
 | Field  | Type        | Null | Key | Default | Extra |
-+--------+-------------+------+-----+---------+-------+
+|--------|-------------|------|-----|---------|-------|
 | pin    | varchar(20) | YES  |     | NULL    |       |
 | date   | varchar(50) | YES  |     | NULL    |       |
 | type   | varchar(20) | YES  |     | NULL    |       |
 | amount | varchar(20) | YES  |     | NULL    |       |
-+--------+-------------+------+-----+---------+-------+
+
 
 
