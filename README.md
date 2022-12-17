@@ -11,9 +11,8 @@ This Bank management system aka ATM Simulator System is a desktop based applicat
 
 ### Signup
 
-+----------------+-------------+------+-----+---------+-------+
 | Field          | Type        | Null | Key | Default | Extra |
-+----------------+-------------+------+-----+---------+-------+
+|----------------|-------------|------|-----|---------|-------|
 | formno         | varchar(20) | YES  |     | NULL    |       |
 | name           | varchar(20) | YES  |     | NULL    |       |
 | father_name    | varchar(20) | YES  |     | NULL    |       |
@@ -25,13 +24,11 @@ This Bank management system aka ATM Simulator System is a desktop based applicat
 | city           | varchar(25) | YES  |     | NULL    |       |
 | pincode        | varchar(20) | YES  |     | NULL    |       |
 | state          | varchar(20) | YES  |     | NULL    |       |
-+----------------+-------------+------+-----+---------+-------+
 
 ### signuptwo
 
-+------------------+-------------+------+-----+---------+-------+
 | Field            | Type        | Null | Key | Default | Extra |
-+------------------+-------------+------+-----+---------+-------+
+|------------------|-------------|------|-----|---------|-------|
 | formno           | varchar(20) | YES  |     | NULL    |       |
 | religion         | varchar(20) | YES  |     | NULL    |       |
 | category         | varchar(20) | YES  |     | NULL    |       |
@@ -42,7 +39,6 @@ This Bank management system aka ATM Simulator System is a desktop based applicat
 | aadhar           | varchar(50) | YES  |     | NULL    |       |
 | senior_citizen   | varchar(25) | YES  |     | NULL    |       |
 | existing_account | varchar(20) | YES  |     | NULL    |       |
-+------------------+-------------+------+-----+---------+-------+
 
 ### signupthree
 
